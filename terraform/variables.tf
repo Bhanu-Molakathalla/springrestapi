@@ -17,12 +17,12 @@ variable "az_count" {
 
 variable "app_image" {
   description = "Docker image to run in the ECS cluster"
-  default     = "nginx:latest"
+  default     = "788918166123.dkr.ecr.us-east-1.amazonaws.com/myappawsecr:latest"
 }
 
 variable "app_port" {
   description = "Port exposed by the docker image to redirect traffic to"
-  default     = 80
+  default     = 8080
 }
 
 variable "app_count" {
