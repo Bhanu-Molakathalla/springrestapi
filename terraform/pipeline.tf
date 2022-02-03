@@ -69,9 +69,9 @@ resource "aws_codepipeline" "cicd_pipeline" {
             version = "1"
             output_artifacts = ["tf-code"]
             configuration = {
-                FullRepositoryId = "davoclock/aws-cicd-pipeline"
+                FullRepositoryId = "Bhanu-Molakathalla/springrestapi"
                 BranchName   = "master"
-                ConnectionArn = var.codestar_connector_credentials
+                ConnectionArn = var.github_credentials
                 OutputArtifactFormat = "CODE_ZIP"
             }
         }
