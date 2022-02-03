@@ -48,9 +48,7 @@ variable "github_credentials" {
   type = string
 }
 
-variable "dockerhub_credentials" {
-  type = string
-}
+
 
 variable "profile" {
     description = "AWS credentials profile you want to use"
