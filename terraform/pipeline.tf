@@ -12,10 +12,10 @@ resource "aws_codebuild_project" "tf-plan" {
     image                       = "788918166123.dkr.ecr.us-east-1.amazonaws.com/myappawsecr:latest"
     type                        = "LINUX_CONTAINER"
     image_pull_credentials_type = "SERVICE_ROLE"
-    registry_credential{
-        credential = var.dockerhub_credentials
-        credential_provider = "SECRETS_MANAGER"
-    }
+    # registry_credential{
+    #     credential = var.dockerhub_credentials
+    #     credential_provider = "SECRETS_MANAGER"
+    # }
  }
  source {
      type   = "CODEPIPELINE"
