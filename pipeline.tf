@@ -34,13 +34,13 @@ resource "aws_codebuild_project" "tf-apply" {
 
   environment {
     compute_type                = "BUILD_GENERAL1_SMALL"
-    image                       = "hashicorp/terraform:0.14.3"
+    image                       = "788918166123.dkr.ecr.us-east-1.amazonaws.com/terraform:latest"
     type                        = "LINUX_CONTAINER"
     image_pull_credentials_type = "SERVICE_ROLE"
-    registry_credential{
-        credential = var.dockerhub_credentials
-        credential_provider = "SECRETS_MANAGER"
-    }
+    # registry_credential{
+    #     credential = var.dockerhub_credentials
+    #     credential_provider = "SECRETS_MANAGER"
+    # }
  }
  source {
      type   = "CODEPIPELINE"
